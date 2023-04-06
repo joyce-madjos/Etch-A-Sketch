@@ -54,10 +54,17 @@ h1 {
 
 .slider {
   position: absolute;
-  bottom: 50px;
-  left: 250px;
   background-color: pink;
   height: 20px;
+  left: 10px;
+  top: 280px;
+
+
+  writing-mode: bt-lr; /* Rotates the slider 90 degrees clockwise */
+  transform: rotate(270deg); /* Flips the slider horizontally */
+  /* height: 200px; Sets the height of the slider */
+  margin: 0 ; /* Adds some margin to the left and right of the slider */
+padding: 0;
 }
 
 .colors-button {
