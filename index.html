@@ -13,13 +13,20 @@
 <body>
     <div class="container">
         <h1>Etch-A-Sketch</h1>
-        <div class="grid-lines-container">
-            <div class="box">
-cat
-            </div>
+        <div id="grid-container" class="grid-lines-container"></div>
+        <button id="grids" class="bottom-button">Grid Lines: <span id="slider-value">16x16</span></button>
+        <input type="range" min="1" max="100" value="16" class="slider">
+       
+        <div class="clear">
+            <button id="white-button" class="select-button">Erase</button>
+            <button id="delete-button" class="select-button">Delete All</button>
         </div>
-        <button id="grids" class="bottom-button">Grid Lines</button>
-        <button id="color" class="bottom-button">Color</button>
+       
+        <div class="colors-button">
+            <button id="random-color" class="select-button">Random</button>
+            <button id="color" class="color"><span id="text-color">Color:</span> <span id="mouse-color">White</span></button>
+           <button id="black-button" class="select-button">Black</button>
+       </div>
     </div>
     <footer style="text-align: center;">
         <p>&#169; 2023 Joyce Madjos.</p>
