@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* cursor: pointer; */
 }
 
 body {
@@ -9,7 +8,6 @@ body {
   border: 0;
   font-family: "Dancing Script", cursive;
   width: 100%;
-  /* height: 100vh; */
 }
 
 h1 {
@@ -36,48 +34,53 @@ h1 {
   border: 2px solid black;
   background-color: white;
   /* gap: 1px; */
+  align-items: stretch;
 }
 
 .box {
-  /* border: 0.01px solid black; */
+  /* border: 1px solid black; */
   /* width: 3px; */
-  height: auto;
-  flex-basis: calc(100% / 16);
   /* background-color: gray; */
-  display: inline-block;
   /* margin: 1px; */
+  display: inline-block;
+  height: auto;
+  /* flex-basis: calc(100% / 10); */
 }
 
-#grids {
-  left: 100px;
+.set-grid-boxes > label{
+  display: none;
 }
 
-.slider {
+.set-grid-boxes > input, .set-grid-boxes > button{
+  height: 40px;
+  padding: 5px;
+  background-color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.set-grid-boxes {
   position: absolute;
-  background-color: pink;
-  height: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid pink; */
   left: 10px;
-  top: 280px;
-
-
-  writing-mode: bt-lr; /* Rotates the slider 90 degrees clockwise */
-  transform: rotate(270deg); /* Flips the slider horizontally */
-  /* height: 200px; Sets the height of the slider */
-  margin: 0 ; /* Adds some margin to the left and right of the slider */
-padding: 0;
+  top: 230px;
+  width: 100px;
+  height: auto;
+  gap: 10px;
+  /* right: 10px;
+    top: 230px; */
 }
 
 .colors-button {
   position: absolute;
   bottom: 10px;
   right: 50px;
-
-  /* height: 20px; */
-  /* border: 2px solid black; */
   display: flex;
   gap: 5px;
   margin: 0;
-  /* margin: 10px; */
 }
 
 .select-button {
@@ -85,8 +88,6 @@ padding: 0;
   font-size: 18px;
   padding: 10px;
   background-color: white;
-
-  /* height: 20px; */
 }
 
 .color {
@@ -102,42 +103,56 @@ padding: 0;
   text-align: center;
 }
 
-#text-color{
-  background-color: "black";
-  /* background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff); */
-
+#mouse-color, #text-color, #with-border, #w-o-border{
+  background: white;
 }
 
-#black-button, #random-color{
+#black-button,
+#random-color {
   margin: auto 0;
 }
 
-.clear{
+.clear {
   display: flex;
   flex-direction: column;
   width: 100px;
-  height: 20px;
+  height: auto;
   gap: 10px;
   right: 10px;
   top: 230px;
   position: absolute;
-
 }
 
-.bottom-button {
-  position: absolute;
-  bottom: 10px;
+.grid-placeholder-button {
   height: 100px;
   width: 100px;
   background-color: white;
   border-radius: 50%;
-  font-family: "Dancing Script", cursive;
   font-size: 20px;
   font-weight: bold;
+  font-family: "Dancing Script", cursive;
+
 }
+
+#with-border, #w-o-border{
+  margin: auto 0;
+  font-family: "Dancing Script", cursive;
+}
+
+.grid-button {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  gap: 5px;
+  margin: 0;
+  height: auto;
+}
+
 footer {
   font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
   border: 0;
+  text-align: center;
 }

@@ -14,9 +14,20 @@
     <div class="container">
         <h1>Etch-A-Sketch</h1>
         <div id="grid-container" class="grid-lines-container"></div>
-        <button id="grids" class="bottom-button">Grid Lines: <span id="slider-value">16x16</span></button>
-        <input type="range" min="1" max="100" value="16" class="slider">
-       
+        
+        <div class="grid-button">
+            <button id="with-border" class="select-button">W/  Border</button>
+            <button id="grids" class="grid-placeholder-button">Grid Lines: <span id="grid-value">16x16</span></button>
+            <button id="w-o-border" class="select-button">W/o Border</button>
+        </div>
+      
+        <div class="set-grid-boxes">
+            <label for="set-grid-boxes">Enter:</label>
+           <input type="number" id="set-grid-boxes" name="set-grid-boxes" min="1" max="100" value="16">
+           <button onclick="getNumber()">Set</button>
+       </div>
+
+        
         <div class="clear">
             <button id="white-button" class="select-button">Erase</button>
             <button id="delete-button" class="select-button">Delete All</button>
@@ -28,7 +39,7 @@
            <button id="black-button" class="select-button">Black</button>
        </div>
     </div>
-    <footer style="text-align: center;">
+    <footer>
         <p>&#169; 2023 Joyce Madjos.</p>
     </footer>
     <script src="script.js"></script>
