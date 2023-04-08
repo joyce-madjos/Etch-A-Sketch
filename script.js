@@ -1,3 +1,4 @@
+// Get the elements from hmtl
 let gridContainer = document.getElementById("grid-container");
 let randomColor = document.getElementById("random-color");
 let blackColor = document.getElementById("black-button");
