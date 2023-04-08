@@ -9,23 +9,22 @@ let mouseColor = document.getElementById("mouse-color");
 let withBorder = document.getElementById("with-border");
 let withOutBorder = document.getElementById("w-o-border");
 
-
 // Default grid
 setGridLines("16");
 
 // Creation of grid
-function setGridLines (gridLinesNumber){
-  gridContainer.innerHTML = ""
+function setGridLines(gridLinesNumber) {
+  gridContainer.innerHTML = "";
   for (let index = 1; index <= gridLinesNumber; index++) {
     for (let a = 1; a <= gridLinesNumber; a++) {
       let boxes = document.createElement("div");
       boxes.classList.add("box");
       boxes.style.width = "auto";
       boxes.style.height = "auto";
-      boxes.style.flexBasis =  "calc(100% / " + gridLinesNumber + ")";
+      boxes.style.flexBasis = "calc(100% / " + gridLinesNumber + ")";
       gridContainer.appendChild(boxes);
     }
-    }
+  }
 }
 
 // Get user's desired number of grid
@@ -33,23 +32,21 @@ function getNumber() {
   let numberInput = document.getElementById("set-grid-boxes");
   let output = document.getElementById("grid-value");
   let number = numberInput.value;
-  if(number > 100){
+  if (number > 100) {
     output.textContent = "Max: 100";
     number = 100;
-  }
-  else{
+  } else {
     output.textContent = number + "x" + number;
   }
 
   // Pass the user's desired number to create the grid
   setGridLines(number);
-  
 }
 
 // Responsible for coloring the grid
-function hoverBoxes(color,boxes) {
+function hoverBoxes(color, boxes) {
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].addEventListener("mouseover", function() {
+    boxes[i].addEventListener("mouseover", function () {
       this.style.backgroundColor = color;
     });
   }
@@ -74,12 +71,12 @@ blackColor.addEventListener("click", () => {
 randomColor.addEventListener("click", () => {
   let boxes = document.querySelectorAll(".box");
   mouseColor.innerHTML = "Random";
-  color.style.background = "linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff)";
+  color.style.background =
+    "linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff)";
   boxes.forEach((boxes) => {
     boxes.addEventListener("mouseover", () => {
       const randomColors = getRandomColor();
       boxes.style.backgroundColor = randomColors;
-      // hoverBoxes(randomColors);
     });
   });
 });
@@ -103,15 +100,14 @@ deleteColors.addEventListener("click", () => {
 
 withBorder.addEventListener("click", () => {
   let boxes = document.querySelectorAll(".box");
-  boxes.forEach(box => {
+  boxes.forEach((box) => {
     box.style.border = "1px solid black";
   });
 });
 
 withOutBorder.addEventListener("click", () => {
   let boxes = document.querySelectorAll(".box");
-  boxes.forEach(box => {
+  boxes.forEach((box) => {
     box.style.border = "none";
   });
 });
-
